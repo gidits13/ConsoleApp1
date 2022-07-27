@@ -1,19 +1,43 @@
 ﻿using System;
 
-class MainClass
+namespace SF_Chapter3
 {
-	public static void Main(string[] args)
-	{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
 
-		string MyName = "Jane";
-		byte MyAge = 27;
-		bool HaveIApet = true;
-		double MyShoeSize = 37.5;
 
-		Console.WriteLine("My name is " + MyName);
-		Console.WriteLine("MyAge " + MyAge);
-		Console.WriteLine("Do I have a pet? " + HaveIApet);
-		Console.WriteLine("My shoe size is " + MyShoeSize);
+            
 
-	}
+            Console.Write("Введите имя:\n");
+            string name = Console.ReadLine();
+
+            Console.Write("Сколько Вам лет?\n");
+            //int age = int.Parse(Console.ReadLine());
+            var age = Convert.ToByte(Console.ReadLine());
+
+            Console.Write("Укажите дату рождения\n");
+            var birtday = Console.ReadLine();
+
+            Console.Write("Какой у Вас любимый день недели\n");
+           // DayOfWeek day = (DayOfWeek)int.Parse(Console.ReadLine());
+           var day = (week)Convert.ToByte(Console.ReadLine());
+
+            Console.WriteLine();
+            Console.WriteLine($"Ваше имя - {name}\nВозраст - {age}\nДень рождения - {birtday}\nЛюбимый день - {day}");
+
+      
+    }
+    }
+}
+enum week : byte
+{
+    Понедельник=1,
+    Вторник,
+    Среда,
+    Четверг,
+    Пятница,
+    Суббота,
+    Воскресенье
 }
